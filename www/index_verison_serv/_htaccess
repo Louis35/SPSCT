@@ -1,0 +1,4 @@
+AuthName "Bienvenu sur -SPSCT-"
+AuthType Basic
+AuthUserFile "/home/vol7_2/hebergratuit.net/heber_18521957/htdocs/.htpasswd"
+Require valid-user
