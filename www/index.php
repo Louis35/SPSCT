@@ -1,4 +1,6 @@
 <?php
+// démarrage session
+session_start();
 // Connexion à la base de donnee spsct
 $bdd = new PDO('mysql:host=localhost;dbname=spsct','root', '');
 // $bdd variable de la base de donne a utiliser sur tout le site
