@@ -1,6 +1,6 @@
 <?php
 // Connexion à la base de donnee spsct
-$bdd = new PDO('mysql:host=localhost;dbname=spsct','root', 'oknmpmuh');
+$bdd = new PDO('mysql:host=localhost;dbname=spsct','root', '');
 // $bdd variable de la base de donne a utiliser sur tout le site
 include("private/include.php");
 if (recup_day() == 1) 
