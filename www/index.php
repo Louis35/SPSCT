@@ -51,6 +51,8 @@ if(isset($_SESSION['Id']))
 			case 'new_matiere':
 				include_once("private/control/new_matiere/new_matiere.php");
 				break;
+
+			case 'sign_in'
 				
 			default:
 				#ACCUEIL
