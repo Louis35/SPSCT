@@ -15,7 +15,7 @@ function Verif_User_Pass($email, $pass)
 	$req->bindParam(':pass', $pass, PDO::PARAM_STR);
 	$req->bindParam(':email', $email, PDO::PARAM_STR);
 	$req->execute();
-	$result_Id = $req->fetchAll();
+	$result_Id = $req->fetch();
 	$req->closeCursor();
 
 	if ($result_Id) 
@@ -27,3 +27,4 @@ function Verif_User_Pass($email, $pass)
 		return false;
 	}
 }
+?>

@@ -21,6 +21,7 @@ include_once("private/modeles/getting/is_control_exist.php");
 include_once("private/modeles/getting/recup_day.php");
 include_once("private/modeles/getting/recup_cumul.php");
 include_once("private/modeles/getting/recup_coeff_matiere.php");
+include_once("private/modeles/getting/recup_all_info_user.php");
 // SETTING
 include_once("private/modeles/setting/set_matiereValideToYes.php");
 include_once("private/modeles/setting/set_objectif.php");
