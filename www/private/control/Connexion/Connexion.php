@@ -1,7 +1,15 @@
 <?php
 if(isset($_POST['mail']) AND isset($_POST['pass']))
 {
-	echo "marche";
+	if(Verif_User_Pass($_POST['mail'], $_POST['pass']))
+	{
+		// setting session
+	}
+	else
+	{
+		// erreur ... redirect
+		header('location: index.php?er=1');
+	}
 }
 else
 {

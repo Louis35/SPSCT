@@ -27,6 +27,8 @@ include_once("private/modeles/setting/set_objectif.php");
 include_once("private/modeles/setting/set_trimestre_actuel.php");
 include_once("private/modeles/setting/reset_cumul_travail.php");
 include_once("private/modeles/setting/add_cumul.php");
+// VEFIR
+include_once("private/modeles/Verif/Verif_User_Pass.php")
 // FUNCTION
 include_once("private/function/calcule_timeToWork.php");
 include_once("private/function/afficher_heure_minute.php");
