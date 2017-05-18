@@ -6,6 +6,10 @@
 	{
 		echo "<strong>mauvaise e-mail ou Mot de passe</strong><br />";
 	}
+	if(isset($_GET['back']))
+	{
+		echo "<strong>Compte créer ! Vous pouver maintenant vous connecter :</strong><br />";
+	}
 	?>
 	<form method="POST" action="index.php" id="champ_de_connexion">
 		<label for="mail">e-mail :  </label>

@@ -1,18 +1,18 @@
 <h1>Inscription</h1>
 <p>
 	<?php
-	if($erreur)
+	if(isset($erreur))
 	{
 		echo "<strong>une érreur à été détécter</strong><br />";
 	}
 	?>
-	<form method="POST" action="index.php?action=sign_in" id="champ_de_connexion">
+	<form method="POST" action="index.php?go=sign_in" id="champ_de_connexion">
 		<label for="nom">Nom :  </label>
 		<input type="text" name="nom" />
 		<br />
 		<label for="prenom">Prénom :  </label>
 		<input type="text" name="prenom" />
-		<br />prenom
+		<br />
 		<label for="mail">e-mail :  </label>
 		<input type="e-mail" name="mail" />
 		<br />

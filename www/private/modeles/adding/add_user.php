@@ -1,5 +1,5 @@
 <?php
-function add_user($mail, $nom, $prenom, $classe, $departement, $pass)
+function add_user($mail, $nom, $prenom, $classe, $adresse, $departement, $pass)
 {
  	global $bdd;
 
@@ -7,8 +7,9 @@ function add_user($mail, $nom, $prenom, $classe, $departement, $pass)
  	$nom = (string) $nom;
  	$prenom = (string) $prenom;
  	$classe = (int) $classe;
+ 	$adresse = (string) $classe;
  	$departement = (int) $departement;
- 	$passe = (string) $passe;
+ 	$pass = (string) $pass;
  	$pass = sha1($pass);
 
  	$req = $bdd->prepare('INSERT INTO users (`Nom`, `Prenom`, `Classe`, `num_departement`, `adresse`, `email`, `pass`) 
@@ -17,7 +18,7 @@ function add_user($mail, $nom, $prenom, $classe, $departement, $pass)
  	$req->bindParam(':Prenom', $prenom, PDO::PARAM_STR);
  	$req->bindParam(':Classe', $classe, PDO::PARAM_INT);
  	$req->bindParam(':department', $departement, PDO::PARAM_INT);
- 	$req->bindParam(':adresse', $departement, PDO::PARAM_STR;
+ 	$req->bindParam(':adresse', $adresse, PDO::PARAM_STR);
  	$req->bindParam(':email', $mail, PDO::PARAM_STR);
  	$req->bindParam(':pass', $pass, PDO::PARAM_STR);
 	$matieres = $req->execute();

@@ -3,7 +3,8 @@ if(isset($_POST['mail']) AND isset($_POST['pass']) AND isset($_POST['nom']) AND 
 {
 	if($_POST['pass'] = $_POST['pass2'])
 	{
-
+		add_user($_POST['mail'], $_POST['nom'], $_POST['prenom'], $_POST['classe'], $_POST['adresse'] ,$_POST['department'], $_POST['pass']);
+		// header('location: index.php?back=account_create');
 	}
 	else
 	{
@@ -12,14 +13,6 @@ if(isset($_POST['mail']) AND isset($_POST['pass']) AND isset($_POST['nom']) AND 
 }
 else
 {
-	if(isset($_GET['er']))
-	{
-		$erreur = $_GET['er'];
-	}
-	else
-	{
-		$erreur = 0;
-	}
 	include("private/control_vues/SignIn.php");
 }
 
