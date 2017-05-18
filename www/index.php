@@ -5,7 +5,7 @@ session_start();
 $bdd = new PDO('mysql:host=localhost;dbname=spsct','root', '');
 // $bdd variable de la base de donne a utiliser sur tout le site
 include("private/include.php");
-if(isset($_SESSION['Id']))
+if(isset($_SESSION['Id']) OR isset($_GET['go']))
 {
 	if (recup_day() == 1) 
 	{
@@ -51,12 +51,23 @@ if(isset($_SESSION['Id']))
 			case 'new_matiere':
 				include_once("private/control/new_matiere/new_matiere.php");
 				break;
-
-			case 'sign_in'
 				
 			default:
 				#ACCUEIL
 				include_once("private/control/accueil/accueil.php");
+				break;
+		}
+	}
+	elseif (isset($_GET['go'])) 
+	{
+		switch ($_GET['go']) 
+		{
+			case 'sign_in':
+				include_once("private/control/Connexion/SignIn.php");
+				break;
+			
+			default:
+				include_once("index.php");
 				break;
 		}
 	}

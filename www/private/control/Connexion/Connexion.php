@@ -1,11 +1,19 @@
 <?php
-if(isset($_GET['er']))
+if(isset($_POST['mail']) AND isset($_POST['pass']))
 {
-	$erreur = true;
+	echo "marche";
 }
 else
 {
-	$erreur = false;
+	if(isset($_GET['er']))
+	{
+		$erreur = true;
+	}
+	else
+	{
+		$erreur = false;
+	}
+	include("private/control_vues/connect.php");
 }
-include("private/control_vues/connect.php");
+
 ?>
