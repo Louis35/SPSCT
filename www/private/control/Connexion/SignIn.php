@@ -1,17 +1,24 @@
 <?php
-if(isset($_POST['mail']) AND isset($_POST['pass']) AND isset($_POST['nom']) AND isset($_POST['prenom']) AND isset($_POST['classe']))
+if(isset($_POST['mail']) AND isset($_POST['pass']) AND isset($_POST['nom']) AND isset($_POST['prenom']) AND isset($_POST['classe']) AND isset($_POST['adresse']) AND isset($_POST['department']) AND isset($_POST['pass2']))
 {
-	echo "marche";
+	if($_POST['pass'] = $_POST['pass2'])
+	{
+
+	}
+	else
+	{
+		header('location: index.php?er=pass');
+	}
 }
 else
 {
 	if(isset($_GET['er']))
 	{
-		$erreur = true;
+		$erreur = $_GET['er'];
 	}
 	else
 	{
-		$erreur = false;
+		$erreur = 0;
 	}
 	include("private/control_vues/SignIn.php");
 }

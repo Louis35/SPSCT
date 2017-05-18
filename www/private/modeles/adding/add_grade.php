@@ -1,6 +1,6 @@
 <?php
 function add_grade($trimestre, $Id_matiere, $note, $coeff)
- {
+{
  	global $bdd;
 
  	$trimestre = (int) $trimestre;

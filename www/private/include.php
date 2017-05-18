@@ -3,6 +3,7 @@
 include_once("private/modeles/adding/add_grade.php");
 include_once("private/modeles/adding/add_matiere.php");
 include_once("private/modeles/adding/add_control.php");
+include_once("private/modeles/adding/add_user.php");
 // GETTING
 include_once("private/modeles/getting/recup_all_matiere.php");
 include_once("private/modeles/getting/recup_date.php");
