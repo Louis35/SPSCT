@@ -5,7 +5,7 @@ if (isset($_GET['action']))
 	{
 		if (isset($_POST['nom']) AND isset($_POST['matiere']) AND isset($_POST['date']) AND isset($_POST['difficulte'])) 
 		{
-			add_control($_POST['nom'], $_POST['matiere'], $_POST['date'], $_POST['difficulte']);
+			add_control($_POST['nom'], $_POST['matiere'], $_POST['date'], $_POST['difficulte'], $_SESSION['Id']);
 			header('location: index.php?pageId=control&action=view');
 		}
 		else
@@ -16,8 +16,8 @@ if (isset($_GET['action']))
 	}
 	elseif ($_GET['action'] == "view") 
 	{
-		$controles = recup_control();
-		$matieres = recup_all_matieres(recup_trimestre());
+		$controles = recup_control($_SESSION['Id']);
+		$matieres = recup_all_matieres(recup_trimestre($_SESSION['Id']), $_SESSION['Id']);
 		$date = recup_date();
 		include("private/control_vues/control.php");
 	}
