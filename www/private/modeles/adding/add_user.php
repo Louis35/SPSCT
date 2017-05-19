@@ -7,7 +7,7 @@ function add_user($mail, $nom, $prenom, $classe, $adresse, $departement, $pass)
  	$nom = (string) $nom;
  	$prenom = (string) $prenom;
  	$classe = (int) $classe;
- 	$adresse = (string) $classe;
+ 	$adresse = (string) $adresse;
  	$departement = (int) $departement;
  	$pass = (string) $pass;
  	$pass = sha1($pass);
