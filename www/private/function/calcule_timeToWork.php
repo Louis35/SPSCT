@@ -1,5 +1,5 @@
 <?php
-function calcule_timeToWork($timeToWork, $regularite = 21)
+function calcule_timeToWork($timeToWork, $regularite = 21, $Id_user)
 {
 	// tableau des Points a rattraper
 	$PR_;
@@ -13,12 +13,12 @@ function calcule_timeToWork($timeToWork, $regularite = 21)
 	$coeff_generale;
 	// tableau resultat
 	$timeToWork_;
-	$trimestre = recup_trimestre();
-	$matiereId = recup_matiere_Id($trimestre);
+	$trimestre = recup_trimestre($Id_user);
+	$matiereId = recup_matiere_Id($trimestre, $Id_user);
 	// calcule des point a ratraper
 	foreach ($matiereId as $Id) 
 	{
-		$PR_[] = $regularite - recup_moyennes_matieres($trimestre, $Id['Id']);
+		$PR_[] = $regularite - recup_moyennes_matieres($trimestre, $Id['Id'], $Id_user);
 	}
 	// calcule de la somme afin de calculer les coeff pr_
 	$sommme_PR = 0;
@@ -32,12 +32,12 @@ function calcule_timeToWork($timeToWork, $regularite = 21)
 		$PRsurSOM_[] = round($value / $sommme_PR, 2);
 	}
 	// vérification de l'éxistance de controle
-	if (is_control_exist())
+	if (is_control_exist($Id_user))
 	{
 		// calcule c_ de control
 		foreach ($matiereId as $Id)
 		{
-			$controls = recup_control_proche($Id['Id']);
+			$controls = recup_control_proche($Id['Id'], $Id_user);
 			$sous_c_ = 0;
 			foreach ($controls as $value)
 			{
@@ -76,7 +76,7 @@ function calcule_timeToWork($timeToWork, $regularite = 21)
 	// tableau du rendu $timeToWork
 	foreach ($coeff_generale as $key => $value) 
 	{
-		$timeToWork_['matiere'][] = recup_matiereName_By_Id($matiereId[$key]['Id']);
+		$timeToWork_['matiere'][] = recup_matiereName_By_Id($matiereId[$key]['Id'], $Id_user);
 		$timeToWork_['minute'][] = round($value * $timeToWork);
 	}
 	return $timeToWork_;
