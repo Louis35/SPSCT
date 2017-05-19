@@ -51,6 +51,10 @@ if(isset($_SESSION['Id']) OR isset($_GET['go']) OR isset($_GET['er']))
 			case 'new_matiere':
 				include_once("private/control/new_matiere/new_matiere.php");
 				break;
+
+			case 'deco':
+				include_once("private/control/connexion/deco.php");
+				break;
 				
 			default:
 				#ACCUEIL
