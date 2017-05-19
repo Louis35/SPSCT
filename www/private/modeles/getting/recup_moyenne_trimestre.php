@@ -1,7 +1,7 @@
 <?php
-function recup_moyenne_trimestre($trimestre)
+function recup_moyenne_trimestre($trimestre, $Id_user)
  {
- 	$Id_matieres = recup_matiere_Id($trimestre);
+ 	$Id_matieres = recup_matiere_Id($trimestre, $Id_user);
  	$trimestre = (int) $trimestre;
  	$tableau_moyenne;
  	$tableau_coeff;
@@ -9,8 +9,8 @@ function recup_moyenne_trimestre($trimestre)
  	$sommes_coeff = 0;
  	foreach ($Id_matieres as $value) 
  	{
- 		$tableau_moyenne[] = recup_moyennes_matieres($trimestre, $value['Id']);
- 		$tableau_coeff[] = recup_coeff_matiere($value['Id']);
+ 		$tableau_moyenne[] = recup_moyennes_matieres($trimestre, $value['Id'], $Id_user);
+ 		$tableau_coeff[] = recup_coeff_matiere($value['Id'], $Id_user);
  	}
  	foreach ($tableau_moyenne as $key => $value) 
  	{
