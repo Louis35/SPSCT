@@ -1,5 +1,5 @@
 <?php
-function recup_last_grade($trimestre, $Id_matiere)
+function recup_last_grade($trimestre, $Id_matiere, $Id_user)
  {
  	global $bdd;
 
@@ -11,12 +11,13 @@ function recup_last_grade($trimestre, $Id_matiere)
  						  FROM 
  						    notes 
  						  WHERE 
- 						    Trimestre = :trimestre AND Id_matiere = :Id_matiere
+ 						    Trimestre = :trimestre AND Id_matiere = :Id_matiere AND Id_User = :Id_user
  						  ORDER BY 
  						    Date_note DESC
  						    ');
  	$req->bindParam(':trimestre', $trimestre, PDO::PARAM_INT);
  	$req->bindParam(':Id_matiere', $Id_matiere, PDO::PARAM_INT);
+ 	$req->bindParam(':Id_user', $Id_user, PDO::PARAM_INT);
  	$req->execute();
  	
 

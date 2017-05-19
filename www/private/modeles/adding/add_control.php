@@ -1,5 +1,5 @@
 <?php
-function add_control($nom, $Id_matiere, $Id_user, $date, $difficulte)
+function add_control($nom, $Id_matiere, $date, $difficulte, $Id_user)
 {
 	global $bdd;
 

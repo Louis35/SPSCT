@@ -1,5 +1,5 @@
 <?php
-function add_grade($trimestre, $Id_matiere, $Id_User $note, $coeff)
+function add_grade($trimestre, $Id_matiere, $note, $coeff, $Id_User)
 {
  	global $bdd;
 
