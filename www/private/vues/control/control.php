@@ -14,7 +14,7 @@
 			foreach ($controles as $control)
 			{
 				echo "<tr><td>";
-				echo recup_matiereName_By_Id($control['Id_matiere']) . "</td><td>";
+				echo recup_matiereName_By_Id($control['Id_matiere'], $_SESSION['Id']) . "</td><td>";
 				echo $control['date_c'] . "</td><td>";
 				echo $control['nom'] . "</td><td>";
 				echo $control['difficulte'] . "</td></tr>";

@@ -3,18 +3,18 @@
 	<?php
 	if(isset($erreur))
 	{
-		echo "<strong>une érreur à été détécter</strong><br />";
+		echo "<strong>Les mots de passes de correspondent pas !</strong><br />";
 	}
 	?>
 	<form method="POST" action="index.php?go=sign_in" id="champ_de_connexion">
 		<label for="nom">Nom :  </label>
-		<input type="text" name="nom" />
+		<input type="text" name="nom" required />
 		<br />
 		<label for="prenom">Prénom :  </label>
-		<input type="text" name="prenom" />
+		<input type="text" name="prenom" required />
 		<br />
 		<label for="mail">e-mail :  </label>
-		<input type="e-mail" name="mail" />
+		<input type="e-mail" name="mail" required />
 		<br />
 		<label for="classe">Dans quelle classe êtes vous ?</label><br />
 	        <select name="classe" id="classe">
@@ -28,16 +28,16 @@
 	        </select>
 	    <br />
 	    <label for="adresse">Adresse :  </label>
-		<input type="text" name="adresse" />
+		<input type="text" name="adresse" required />
 		<br />
 		<label for="department">Numéro de départment :  </label>
-		<input type="number" name="department" min="1" max="101" step="1" />
+		<input type="number" name="department" min="1" max="101" step="1" required />
 		<br />
 		<label for="pass">Mot de passe : </label>
-		<input type="password" name="pass" />	
+		<input type="password" name="pass" required />	
 		<br />
 		<label for="pass2">Vérif. Mot de passe : </label>
-		<input type="password" name="pass2" />	
+		<input type="password" name="pass2" required />	
 		<br />
 		<input type="submit" name="Inscription" />
 	</form>

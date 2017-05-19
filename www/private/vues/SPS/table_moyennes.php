@@ -12,7 +12,7 @@
 			foreach ($tableau_matieres as $key => $matiere) 
 			{
 				$moyenne_matiere_ = round($tableau_moyennes[$key], 2);
-				$last_grade = recup_last_grade($trimestre, $tableau_matieres_Id[$key]);
+				$last_grade = recup_last_grade($trimestre, $tableau_matieres_Id[$key], $_SESSION['Id']);
 
 				echo '<tr><td>' . $matiere . '</td><td>' . $moyenne_matiere_ . '</td><td>';
 				foreach ($last_grade as $grade) 

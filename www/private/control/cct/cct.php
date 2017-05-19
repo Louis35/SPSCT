@@ -20,8 +20,7 @@ if($matiere_Id)
 	elseif (isset($_GET['add'])) 
 	{
 		add_cumul($_POST['time'], $_SESSION['Id']);
-		print_r($_POST['time']);
-		// header('location: index.php');
+		header('location: index.php');
 	}
 	else
 	{

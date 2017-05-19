@@ -5,6 +5,7 @@ function recup_moyennes_matieres($trimestre, $Id_matiere, $Id_user)
 
  	$trimestre = (int) $trimestre;
  	$Id_matiere = (int) $Id_matiere;
+ 	$Id_user = (int) $Id_user;
 
  	$req = $bdd->prepare('SELECT (SUM(Note * coeff) / SUM(coeff)) AS Moyenne 
  						  FROM notes 

@@ -4,6 +4,7 @@ function recup_coeff_matiere($Id_matiere, $Id_user)
  	global $bdd;
 
  	$Id_matiere = (int) $Id_matiere;
+ 	$Id_user = (int) $Id_user;
 
  	$req = $bdd->prepare('SELECT Coeff
  						  FROM matieres

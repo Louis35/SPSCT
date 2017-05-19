@@ -12,7 +12,7 @@ function add_matiere($name, $trimestre, $coeff, $Id_user)
  	$req->bindParam(':trimestre', $trimestre, PDO::PARAM_INT);
  	$req->bindParam(':name', $name, PDO::PARAM_STR);
  	$req->bindParam(':coeff', $coeff, PDO::PARAM_INT);
- 	$req->bindParam(':Id_user', $coeff, PDO::PARAM_INT);
+ 	$req->bindParam(':Id_user', $Id_user, PDO::PARAM_INT);
 	$matieres = $req->execute();
 	$req->closeCursor();
  }
