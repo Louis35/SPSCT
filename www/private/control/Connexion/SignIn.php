@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['mail']) AND isset($_POST['pass']) AND isset($_POST['nom']) AND isset($_POST['prenom']) AND isset($_POST['classe']) AND isset($_POST['adresse']) AND isset($_POST['department']) AND isset($_POST['pass2']))
+if(isset($_POST['mail']) AND isset($_POST['pass']) AND isset($_POST['nom']) AND isset($_POST['prenom']) AND isset($_POST['pseudo']) AND isset($_POST['classe']) AND isset($_POST['adresse']) AND isset($_POST['department']) AND isset($_POST['pass2']))
 {
 	if($_POST['pass'] == $_POST['pass2'])
 	{

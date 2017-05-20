@@ -13,8 +13,11 @@
 		<label for="prenom">Prénom :  </label>
 		<input type="text" name="prenom" required />
 		<br />
-		<label for="mail">e-mail :  </label>
-		<input type="e-mail" name="mail" required />
+		<label for="prenom">Prénom :  </label>
+		<input type="text" name="prenom" required />
+		<br />
+		<label for="pseudo">Pseudo :  </label>
+		<input type="e-mail" name="pseudo" required />
 		<br />
 		<label for="classe">Dans quelle classe êtes vous ?</label><br />
 	        <select name="classe" id="classe">
