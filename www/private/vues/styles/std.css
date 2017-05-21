@@ -254,3 +254,18 @@ h4
 	max-height: 350px;
 	overflow: auto;
 }
+#champ_de_connexion
+{
+	width: 50%;
+	margin: auto;
+}
+#champ_de_connexion form
+{
+	display: flex;
+	flex-direction: column;
+}
+#champ_de_connexion form label
+{
+	font-size: 20px;
+	color: white;
+}

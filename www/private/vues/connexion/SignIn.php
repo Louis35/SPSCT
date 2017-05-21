@@ -1,22 +1,29 @@
 <h1>Inscription</h1>
-<p>
+<div id="champ_de_connexion">
 	<?php
 	if(isset($erreur))
 	{
-		echo "<strong>Les mots de passes de correspondent pas !</strong><br />";
+		echo "<p><strong>Les mots de passes de correspondent pas !</strong><br /></p>";
 	}
 	?>
-	<form method="POST" action="index.php?go=sign_in" id="champ_de_connexion">
+	<form method="POST" action="index.php?go=sign_in">
 		<label for="nom">Nom :  </label>
 		<input type="text" name="nom" required />
+		<br />
 		<br />
 		<label for="prenom">Prénom :  </label>
 		<input type="text" name="prenom" required />
 		<br />
-		<label for="pseudo">Pseudo :  </label>
-		<input type="e-mail" name="pseudo" required />
 		<br />
-		<label for="classe">Dans quelle classe êtes vous ?</label><br />
+		<label for="mail">E-mail :  </label>
+		<input type="e-mail" name="mail" required />
+		<br />
+		<br />
+		<label for="pseudo">Pseudo :  </label>
+		<input type="text" name="pseudo" required />
+		<br />
+		<br />
+		<label for="classe">Dans quelle classe êtes vous ?</label>
 	        <select name="classe" id="classe">
 	            <option value="6">6 ème</option>
 	            <option value="5">5 ème</option>
@@ -27,19 +34,26 @@
 	            <option value="0">Terminale</option>
 	        </select>
 	    <br />
+	    <br />
 	    <label for="adresse">Adresse :  </label>
 		<input type="text" name="adresse" required />
+		<br />
 		<br />
 		<label for="department">Numéro de départment :  </label>
 		<input type="number" name="department" min="1" max="101" step="1" required />
 		<br />
+		<br />
 		<label for="pass">Mot de passe : </label>
 		<input type="password" name="pass" required />	
+		<br />
 		<br />
 		<label for="pass2">Vérif. Mot de passe : </label>
 		<input type="password" name="pass2" required />	
 		<br />
+		<br />
 		<input type="submit" name="Inscription" />
 	</form>
-	<a href="index.php">Déjâ un compte ? Connecter vous !</a>
-</p>
+	<br />
+	<br />
+	<a href="index.php" style="text-align: center;">Déjâ un compte ? Connecter vous !</a>
+</div>
