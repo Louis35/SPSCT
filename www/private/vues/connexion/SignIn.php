@@ -13,9 +13,6 @@
 		<label for="prenom">Prénom :  </label>
 		<input type="text" name="prenom" required />
 		<br />
-		<label for="prenom">Prénom :  </label>
-		<input type="text" name="prenom" required />
-		<br />
 		<label for="pseudo">Pseudo :  </label>
 		<input type="e-mail" name="pseudo" required />
 		<br />
